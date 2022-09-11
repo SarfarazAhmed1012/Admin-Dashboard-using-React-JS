@@ -131,37 +131,19 @@ const Ecommerce = () => {
                   color="blue"
                 />
               </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="blue"
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
-          {/* <div class="grid grid-cols-4 gap-4">
-            <div className="bg-green-400 md:col-span-2 lg:col-span-1 w-96 sm:col-span-4">
-              01
-            </div>
-            <div className="bg-green-400 md:col-span-2 lg:col-span-1 sm:col-span-4">
-              09
-            </div>
-            <div className="bg-green-400 md:col-span-2 lg:col-span-1 sm:col-span-4">
-              09
-            </div>
-            <div className="bg-green-400 md:col-span-2 lg:col-span-1 sm:col-span-4">
-              09
-            </div>
-            <div className="bg-green-400 md:col-span-2 lg:col-span-1 sm:col-span-4">
-              09
-            </div>
-            <div className="bg-green-400 md:col-span-2 lg:col-span-1 sm:col-span-4">
-              09
-            </div>
-            <div className="bg-green-400 lg:col-span-1">09</div>
-            <div className="bg-green-400 lg:col-span-1">09</div>
-            <div className="bg-green-400 lg:col-span-1">01</div>
-            <div className="bg-green-400 lg:col-span-1">09</div>
-            <div className="bg-green-400 lg:col-span-1">09</div>
-            <div className="bg-green-400 lg:col-span-1">09</div>
-            <div className="bg-green-400 lg:col-span-1">09</div>
-            <div className="bg-green-400">09</div>
-            <div className="bg-green-400">09</div>
-          </div> */}
         </div>
       </div>
     </div>

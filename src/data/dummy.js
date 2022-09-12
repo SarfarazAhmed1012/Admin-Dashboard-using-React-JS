@@ -414,7 +414,7 @@ export const LinePrimaryYAxis = {
 };
 
 export const customersGrid = [
-  { type: "checkbox", width: "50" },
+  { type: "checkbox", width: "80" },
   {
     headerText: "Name",
     width: "150",

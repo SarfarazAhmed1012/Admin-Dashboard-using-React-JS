@@ -11,8 +11,11 @@ import {
 
 import { employeesData, employeesGrid } from "../data/dummy";
 import { Header } from "../components";
+import { useStateContext } from "../context/ContextProvider";
 
 const Employees = () => {
+  const { currentMode } = useStateContext();
+
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl dark:text-gray-200 dark:bg-secondary-dark-bg">
       <Header category="Page" title="Employees" />
@@ -24,12 +27,17 @@ const Employees = () => {
         pageSettings={{ pageCount: 5 }}
         toolbar={["Search"]}
       >
-        <ColumnsDirective>
+        <ColumnsDirective
+          background={currentMode === "Dark" ? "#33373E" : "#fff"}
+        >
           {employeesGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject services={[Search, Page, Toolbar]} />
+        <Inject
+          services={[Search, Page, Toolbar]}
+          background={currentMode === "Dark" ? "#33373E" : "#fff"}
+        />
       </GridComponent>
     </div>
   );

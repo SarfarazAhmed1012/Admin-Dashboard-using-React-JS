@@ -36,6 +36,7 @@ const Navbar = () => {
     handleClick,
     screenSize,
     setScreenSize,
+    currentColor,
   } = useStateContext();
 
   useEffect(() => {
@@ -58,7 +59,7 @@ const Navbar = () => {
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu />}
       />
       <div className="flex">
@@ -66,21 +67,21 @@ const Navbar = () => {
           title="Cart"
           dotColor="0"
           customFunc={() => handleClick("cart")}
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
           customFunc={() => handleClick("chat")}
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title="Notification"
           dotColor="#03C9D7"
           customFunc={() => handleClick("notification")}
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content="Profile" position="BottomCenter">
@@ -88,10 +89,15 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" src={avatar} />
+            <img
+              className="rounded-full w-8 h-8"
+              src={
+                "https://media-exp1.licdn.com/dms/image/C5603AQHdy39jxp1X1w/profile-displayphoto-shrink_800_800/0/1627227415523?e=1668643200&v=beta&t=wwgJLODgWWK_AitMsiPzXvR6kyNc3wDHXVOwTyI1w6c"
+              }
+            />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>{" "}
-              <span className="text-gray-400 text-14 font-bold ml-1 text-14">
+              <span className="text-gray-400 text-14 font-bold ml-1">
                 Sarfaraz Ahmed
               </span>
             </p>

@@ -36,6 +36,7 @@ const ThemeSettings = () => {
               className="cursor-pointer"
               onChange={setMode}
               checked={currentMode === "Light"}
+              onClick={() => setThemeSettings(false)}
             />
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="light" className="ml-2 text-md cursor-pointer">
@@ -51,6 +52,7 @@ const ThemeSettings = () => {
               onChange={setMode}
               className="cursor-pointer"
               checked={currentMode === "Dark"}
+              onClick={() => setThemeSettings(false)}
             />
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
@@ -75,7 +77,10 @@ const ThemeSettings = () => {
                     type="button"
                     className="h-10 w-10 rounded-full cursor-pointer"
                     style={{ backgroundColor: item.color }}
-                    onClick={() => setColor(item.color)}
+                    onClick={() => {
+                      setColor(item.color);
+                      setThemeSettings(false);
+                    }}
                   >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${

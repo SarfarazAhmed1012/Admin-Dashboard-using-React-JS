@@ -1,2 +1,2 @@
 ### Demo:
-https://admin-dashboard-syncfusion-1012.netlify.app/
+https://syncfusion-admin-dashboard-1012.netlify.app/
